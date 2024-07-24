@@ -19,7 +19,7 @@ Route::get('/v1/sayhi', function(Request $request){
 });
 
 
-Route::get('v1/register', function(Request $request)
+Route::post('v1/register', function(Request $request)
 {
     $attrs = FacadesValidator::make($request->all(),[
         'name'=> 'required|string',
@@ -39,7 +39,7 @@ Route::get('v1/register', function(Request $request)
     $user = User::create([
         'name'=> $request->name,
         'email' => $request->email,
-        'phone_no' => $request->phone_no,
+       // 'phone_no' => $request->phone_no,
         'password'=> $request->password,
     ]);
 
