@@ -5,7 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Illuminate\Validation\Rules\Password;
-use Illuminate\Validation\Validator;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
